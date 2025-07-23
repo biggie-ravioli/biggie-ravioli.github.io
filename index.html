@@ -4,25 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PhatCatSite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to PhatCatSite</h1>
-    <nav>
-      <a href="#">Home</a> |
-      <a href="#">About</a> |
-      <a href="#">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <p>This is the start of my awesome website!</p>
-  </main>
+<header>
+  <h1>PhatCatSite</h1>
+  <nav>
+    <ul class="menu">
+      <li><a href="#music">Music</a></li>
+      <li><a href="#writing">Creative Writing</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#about">About Me</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <footer>
-    <p>© 2025 Dom Astolfi</p>
-  </footer>
+<main>
+  <section id="music">
+    <h2>My Music</h2>
+    <p>Showcase your music here — embed tracks, link your mixtapes, or add descriptions.</p>
+  </section>
+
+  <section id="writing">
+    <h2>Creative Writing</h2>
+    <p>Share your stories, poems, or horror ideas here.</p>
+  </section>
+
+  <section id="reviews">
+    <h2>Reviews</h2>
+    <p>Post your honest takes on movies, TV shows, games, or albums.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Tell visitors who you are and what you’re about.</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Dom Astolfi</p>
+</footer>
+
+<script>
+  // Optional: smooth scroll behavior for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
-
