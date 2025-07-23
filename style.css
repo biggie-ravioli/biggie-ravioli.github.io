@@ -39,6 +39,30 @@ header {
   text-decoration: underline;
 }
 
+/* Submenu for writing genres */
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.submenu li a {
+  color: #ffa500;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.submenu li a:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+
 main {
   max-width: 900px;
   margin: 30px auto;
@@ -68,12 +92,14 @@ footer {
 
 /* Responsive tweaks */
 @media (max-width: 600px) {
-  .menu {
+  .menu, .submenu {
     flex-direction: column;
+    align-items: center;
     gap: 15px;
   }
-  
-  .menu li a {
+
+  .menu li a,
+  .submenu li a {
     font-size: 16px;
   }
 }
